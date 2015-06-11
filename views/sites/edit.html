@@ -1,0 +1,161 @@
+<!-- Modal -->
+<form method="post" action="<?php echo $route[0];?>" id="editForm" class="form-horizontal" enctype="multipart/form-data">
+<div class="modal fade" id="editSite" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+  <div class="modal-lg modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="addModalLabel">Edit Research Site</h4>
+      </div>
+      <div class="modal-body"> 
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Long Title</label>
+				</div>
+				<div class="col-lg-9">
+					<input class="grant_title form-control" type="text" name="grant_title" autocomplete="off" placeholder="Full Research Name">
+				</div>
+			</div>
+			<div class="form-group has-error">
+				<div class="col-lg-3">
+					<label title="Used in page URLs and Main Menu. Ex: id/my-short-title" data-toggle="tooltip" class="form-label">Short Title</label>
+					<span class="label label-danger">Required</span>
+				</div>
+				<div class="col-lg-9">
+					<input required="required" class="short_name form-control" type="text" name="short_name" autocomplete="off" placeholder="Short Research Name">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Research Site Name</label>
+				</div>
+				<div class="col-lg-9">
+					<input class="site_name form-control" type="text" name="site_name" autocomplete="off" placeholder="Site Name">
+				</div>
+			</div>				
+			<div class="form-group has-error">
+				<div class="col-lg-3">
+					<label title="Used in Main Menu as a means of grouping together affiliated Research Sites" data-toggle="tooltip" class="form-label">Site Affiliation</label>
+					<span class="label label-danger">Required</span>
+				</div>
+				<div class="col-lg-9">
+					<input required="required" class="site_affiliation form-control" type="text" name="site_affiliation" autocomplete="off" placeholder="Site Affiliation" required="required">
+				</div>
+			</div>			
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Project Description</label>
+				</div>
+				<div class="col-lg-9">
+					<textarea class="form-control textarea site_desc" name="site_desc" placeholder="Enter a description about your research site" rows="10"></textarea>
+				</div>
+			</div>			
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Sentence Summary</label>
+				</div>
+				<div class="col-lg-9">
+					<input type="text" class="short_desc form-control" name="short_desc" placeholder="Enter a short, one sentence summary" />
+				</div>
+			</div>				
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Selection Criteria</label>
+				</div>
+				<div class="col-lg-9">
+					<textarea class="form-control textarea site_crit" name="site_crit" placeholder="Enter your selection criteria" rows="7"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Websites</label>
+					<a class="btn btn-xs btn-success addlink">Add</a>
+				</div>
+				<div class="col-lg-9 websites"></div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Email</label>
+				</div>
+				<div class="col-lg-9">
+					<input class="form-control site_email" type="text" name="site_email" autocomplete="off" placeholder="Email" />
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Phone</label>
+				</div>
+				<div class="col-lg-9">
+					<input class="form-control site_phone" type="text" name="site_phone" autocomplete="off" placeholder="Phone" />
+				</div>
+			</div>
+			<div class="form-group"></div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Location</label>
+				</div>
+				<div class="col-lg-9">
+					
+					<div class="form-group">
+						<div class="col-lg-12">
+							<input class="form-control street" type="text" name="street" autocomplete="off" placeholder="Street Address" />
+						</div>
+						
+						
+					</div>
+					
+					<div class="form-group">
+						<div class="col-lg-4">
+							<input class="form-control city" type="text" name="city" autocomplete="off" placeholder="City" />
+						</div>
+						<div class="col-lg-4">
+							<input class="form-control state" type="text" name="state" autocomplete="off" placeholder="State" />
+						</div>
+						<div class="col-lg-4">
+							<input class="form-control zip" type="text" name="zip" autocomplete="off" placeholder="ZIP" />
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+			
+
+			<input type="hidden" name="id" id="id">
+      </div>
+      <div class="modal-footer">
+		<div class="col-lg-6" style="text-align:left">
+			<div class="checkbox">
+				<label title="If enabled, this research site will be publicly accessible from the main menu and throughout the website." data-toggle="tooltip" class="form-control enabled" style="border:0;box-shadow:none;" name="enabled">
+				<?php if ($enabled) { ?>			
+					<input type="checkbox" autocomplete="off" checked />				
+				<?php } else { ?>
+					<input type="checkbox" autocomplete="off" />
+				<?php } ?>
+				Site Enabled?
+				</label>
+			</div>
+			<div class="checkbox">
+				<label title="If enabled, this research site will appear on the How Can I Help? page." data-toggle="tooltip" class="form-control recruiting" style="border:0;box-shadow:none;" name="recruiting">
+				<?php if ($recruiting) { ?>			
+					<input type="checkbox" autocomplete="off" checked />				
+				<?php } else { ?>
+					<input type="checkbox" autocomplete="off" />
+				<?php } ?>
+				Recruiting?
+				</label>
+			</div>
+		
+		</div>
+        <div class="col-lg-6">
+			<button class="btn btn-success" value="1" data-loading-text="Updating..."  id="submitbutton" type="submit" name="add" form="addForm">Save Changes</button>
+			<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>	
+
+
+			

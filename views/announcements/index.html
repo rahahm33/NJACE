@@ -1,0 +1,62 @@
+<div class="col-lg-12">	
+	<nav class="bg-heading navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#search-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<h4>
+					&nbsp;
+					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+					<strong> Announcements</strong>
+				</h4>
+			</div>
+			<div class="navbar-collapse collapse" id="search-collapse" aria-expanded="false" style="height: 1px;">	
+				<?php if ($admin) { ?>
+				<div class="navbar-right" style="margin-top:10px;">
+					<a id="addAnnoun" href="javascript:void()" >Add</a>
+				</div>		
+				<?php } ?> 
+			</div>
+		</div>
+    </nav>
+
+	<div class="form-group">
+		<div class="table-responsive"><!-- responsive table with scroll bar -->
+			<table id="announcements" class="table table-striped">
+				<?php
+					echo htmlspecialchars_decode($output);
+				?>
+			</table>
+		</div>
+	</div>
+	
+	<?php 
+	if ($this->render(Base::instance()->get('edit')))
+	{
+		echo $this->render(Base::instance()->get('edit'));
+	}
+	else
+	{
+		echo Base::instance()->get('edit');
+	};
+	
+	if ($this->render(Base::instance()->get('add')))
+	{
+		echo $this->render(Base::instance()->get('add'));
+	}
+	else
+	{
+		echo Base::instance()->get('add');
+	};
+	
+	
+	echo htmlspecialchars_decode($js);
+	?>
+</div>
+
+
+	    	

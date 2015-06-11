@@ -1,0 +1,49 @@
+<!-- Edit Modal -->
+<form method="post" action="<?php echo $route[0];?>/edit" id="memberFormEdit" class="form-horizontal" enctype="multipart/form-data">
+<div class="modal fade" id="memberModalEdit" tabindex="-1" role="dialog" aria-labelledby="memberModalEditLabel" aria-hidden="true">
+  <div class="modal-md modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="memberModalEditLabel"></h4>
+      </div>
+      <div class="modal-body"> 
+
+		<div class="form-group">
+			<div class="col-lg-3">
+				<label class="form-label">Role</label>
+			</div>
+			<div class="col-lg-9">
+				<select class="roles form-control">
+				
+				</select>
+			</div>
+		</div>
+      </div>
+	  
+      <div class="modal-footer">
+		<div class="col-lg-6 text-left">
+		
+			<div class="checkbox">
+				<label title="If enabled, this member will have permission to fully manage this Research Site page, it's users, and media." data-toggle="tooltip" class="form-control enabled" style="border:0;box-shadow:none;" name="enabled">
+					<input name="manage" type="checkbox" autocomplete="off" />
+				Site Manager?
+				</label>
+			</div>
+			
+		</div>
+        <div class="col-lg-6">
+			<button class="btn btn-success" value="1" id="submitbutton" type="submit" name="edit">Save</button>
+			<button class="btn btn-danger" value="1" id="removebutton" type="submit" name="remove">Remove</button>
+			<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+			<input type="hidden" class="userid" name="userid" />
+			<input type="hidden" class="groupid" name="groupid" />
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>	
+
+
+			

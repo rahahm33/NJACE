@@ -1,0 +1,211 @@
+#images tr td:nth-child(3):hover
+{
+	cursor:pointer;
+}
+
+iframe
+{
+	border:0;
+}
+.dropdown-menu .divider
+{
+	border-top:1px solid #eee;
+}
+.ui-menu .ui-menu-item a {
+  font-size: 12px;
+}
+
+.ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1051 !important;
+  float: left;
+  display: none;
+  min-width: 160px;
+  _width: 160px;
+
+  list-style: none;
+  background-color: #ffffff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+}
+
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.ui-state-hover, .ui-state-active {
+      color: #ffffff;
+      text-decoration: none;
+      background-color: #0088cc;
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      background-image: none;
+}
+
+.text-left-xs {
+    text-align: left;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .text-left-sm {
+        text-align: left;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .text-left-md {
+        text-align: left;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .text-left-lg {
+        text-align: left;
+    }
+}
+
+.text-right-xs {
+    text-align: right;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .text-right-sm {
+        text-align: right;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .text-right-md {
+        text-align: right;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .text-right-lg {
+        text-align: right;
+    }
+}
+
+.text-center-xs {
+    text-align: center;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .text-center-sm {
+        text-align: center;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .text-center-md {
+        text-align: center;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .text-center-lg {
+        text-align: center;
+    }
+}
+
+.text-justify-xs {
+    text-align: justify;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .text-justify-sm {
+        text-align: justify;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .text-justify-md {
+        text-align: justify;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .text-justify-lg {
+        text-align: justify;
+    }
+}
+
+div.sceditor-toolbar a.sceditor-button
+{
+	width:auto;
+	height:auto;
+	padding:6px;
+}
+.editbutton
+{
+	font-size:12px;
+	white-space: normal;
+	
+}
+#u_0_0 {
+    width: 100% !important;
+}
+.fb-like.fb_edge_widget_with_comment.fb_iframe_widget, .fb-like.fb_edge_widget_with_comment.fb_iframe_widget > span, .fb-like.fb_edge_widget_with_comment.fb_iframe_widget > span > iframe {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.msucolor
+{
+	color:#c70102
+}
+
+header .navbar-nav {
+	margin:7.5px -15px
+}
+
+img.mapimg
+{
+	o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+	opacity:0.5
+}
+
+img.mapimg:hover
+{
+	opacity:1;
+}

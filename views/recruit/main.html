@@ -1,0 +1,119 @@
+<div class="row">
+<?php if (!($member)) { ?>
+	<div class="col-lg-6">
+		<nav class="bg-heading navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="hidden navbar-toggle collapsed" data-toggle="collapse" data-target="#search-collapse" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h4 id="participate">								
+						Interested? Tell me about study opportunities
+					</h4>
+				</div>
+				<div class="navbar-collapse collapse" id="search-collapse" aria-expanded="false" style="height: 1px;">	
+					<div class="navbar-right" style="margin-top:10px;">		
+					</div>		
+				</div>
+			</div>
+		</nav>
+		<div id="recruitingForm" class="row" style="padding-top:20px;">
+			<div class="col-lg-6">
+				<div class="form-group">
+				<input required="required" type="text" placeholder="First Name" class="form-control fname" name="fname" value="" />
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="form-group">
+				<input required="required" placeholder="Last Name" type="text" class="form-control lname" name="lname" value="" />
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="form-group">
+				<input required="required" type="text" placeholder="Email Address" class="form-control email" name="email" value="" />
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="form-group">
+				<input placeholder="Phone Number" type="text" class="form-control phone" name="phone" value="" />
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form-group">
+					<div class="results"></div>
+					<div><span>I prefer to be contacted by:&nbsp;</span>
+					<input type="radio" class="input-control contactP" name="contact" value="1" checked /> Phone &nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" class="input-control contactE" name="contact" value="1" /> Email<br />	<br />						
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 hidden">
+				<div class="form-group">
+					<div><span>What is the best time to contact you?:&nbsp;</span><br />
+					<textarea class="form-control contacttime" name="contacttime"></textarea></div>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form-group">
+					<input class="form-control btn btn-success mlist" type="submit" name="mlist" value="Sign Up" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6">
+		<a href="/map"><img class="mapimg" src="http://i.imgur.com/f6gM92V.png" alt="" /></a>
+	</div>
+	
+	
+	
+	
+	
+	<!-- Spacer -->
+	<div class="col-lg-12">&nbsp;</div>
+	<?php } ?>
+	<div class="col-lg-12">
+	
+		<nav class="bg-heading navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#search-collapse" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h4>
+						&nbsp;
+						
+						<strong> How can I help?</strong>
+					</h4>
+				</div>
+				<div class="navbar-collapse collapse" id="search-collapse" aria-expanded="false" style="height: 1px;">	
+			
+					<div class="navbar-right" style="margin-top:10px;">
+						<a id="addAnnoun" href="/map" >See All Locations</a>
+					</div>		
+				
+				</div>
+			</div>
+		</nav>
+			
+	
+		<div class="table-responsive">
+			<table class="table">
+			<tr>
+			
+				<th>Research Site</th>
+				<th>Selection Criteria</th>
+			
+			</tr>
+			<?php echo htmlspecialchars_decode($sites);?>
+			</table>
+		</div>
+	</div>
+</div>
+<?php echo htmlspecialchars_decode($js);?>

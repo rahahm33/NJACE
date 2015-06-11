@@ -1,0 +1,41 @@
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+	<div class="form-body">	
+		<form method="POST" action="/ticket/submit">
+			<div class="form-group">
+				<h2 class="heading text-center">Submit a Ticket</h2>
+				<h4 class="heading text-center">Feel free to ask a question or submit a problem.</h4>
+			</div>
+			
+			<div id="custom"> <!-- the div that all the ticket items are going to appear under it  -->
+
+			</div>
+			
+			<div class="form-group">
+				<a id="add_ticket" href="javascript:void()">Add another ticket</a>
+			</div>
+			<!-- we have to give the buttons width (%) in order to expand them -->
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="form-group">
+						<button style="width:100%"type="submit" class="btn btn-success">Submit</button>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="form-group">
+						<button id="cancel" style="width:100%"type="button" class="btn btn-default">Cancel</button>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<small class="small-p-middle text-center">No system is perfect, but with your help, we can try making this one as close as possible.</small>
+			</div>
+		</form>
+	</div>	
+</div>
+<div class="col-lg-3"></div>
+
+<?php echo  htmlspecialchars_decode($rolesComboboxFunction);?>
+<?php echo  htmlspecialchars_decode($anotherTicket);?>
+<?php echo  htmlspecialchars_decode($deleteTicket);?>
+<?php echo  htmlspecialchars_decode($cancel);?>

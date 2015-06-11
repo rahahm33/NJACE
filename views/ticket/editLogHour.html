@@ -1,0 +1,93 @@
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+	<div class="form-body">	
+		<form method="POST" action="/log-hours/edit/<?php echo htmlspecialchars_decode($getTicketByID['ticket_id'])?>">
+			<div class="form-group">
+				<h2 class="heading text-center">Update Log Hour</h2>
+			</div>
+			
+			<div id="custom"> <!-- the div that all the ticket items are going to appear under it -->
+				<div style="border-top:1px solid #eee;padding-top:20px;padding-bottom:10px;">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<textarea id="desc_0" required="required" name="desc" placeholder="Please provide a detailed description of your question or of the problem you are facing and we will get back to you as soon as possible." class="form-control" rows="5"><?php echo htmlspecialchars_decode($getTicketByID['ticket_description'])?></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-xs-6">
+							<div class="form-group">
+								<input id="logindate_0"  value="<?php echo htmlspecialchars_decode(date('m/d/Y', $getTicketByID['starttime']))?>" type="text" name="loginDate" class="form-control pickdate" placeholder="Start Date *" required="required" />
+							</div>
+						</div>
+						<div class="col-lg-6 col-xs-6">
+							<div class="form-group">
+								<input id="logoutdate_0"  value="<?php echo htmlspecialchars_decode(date('m/d/Y', $getTicketByID['endtime']))?>" type="text" name="logoutDate" class=" form-control pickdate"  placeholder="End Date *" required="required" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12" style="height: 0px; bottom: 15px;">
+							<div class="form-group text-center">
+								<b>To</b>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-xs-6">
+							<div class="form-group">
+								<input id="logintime_0"  value="<?php echo htmlspecialchars_decode(date('g:i a', $getTicketByID['starttime']))?>" type="text" name="loginTime" class="form-control picktime" placeholder="Log in time *" required="required" />
+							</div>
+						</div>
+						<div class="col-lg-6 col-xs-6">
+							<div class="form-group">
+								<input id="logouttime_0"  value="<?php echo htmlspecialchars_decode(date('g:i a', $getTicketByID['endtime']))?>" type="text" name="logoutTime" class="form-control picktime" placeholder="Log out time *" required="required" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group text-center timediff" id="timediff_0">
+								<b>(Time)</b>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<select class="form-control sharesites" id="site" name="site" multiple="multiple">
+									<?php echo htmlspecialchars_decode($options)?>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<!-- we have to give the buttons width (%) in order to expand them -->
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="form-group">
+						<button style="width:100%"type="submit" name="save_log_hour" value="save log hour" class="btn btn-success">Save</button>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="form-group">
+						<button style="width:100%"type="submit" name="delete_log_hour" value="delete log hour" class="btn btn-danger">Delete</button>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="form-group">
+						<button id="cancel" style="width:100%"type="button" class="btn btn-default">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>	
+</div>
+<div class="col-lg-3"></div>
+
+<?php echo  htmlspecialchars_decode($initiate);?>
+<?php echo  htmlspecialchars_decode($cancel);?>

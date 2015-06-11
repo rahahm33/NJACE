@@ -1,0 +1,98 @@
+<div class="row">	
+	<div class="col-lg-6">
+		<div class="text-left">	
+			<div class="btn-group">
+				<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+				Add <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a class="addimage" href="javascript:void(0);">Add Images</a></li>
+					<li><a class="addvideo" href="javascript:void(0);">Add Video</a></li>
+					
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6">
+			
+			<div class="text-right">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					Manage <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li class="editbutton"><a href="/<?php echo $siteID;?>">View Site</a></li>
+						<li class="divider"></li>
+						<li><a href="/<?php echo $siteID;?>/media">Manage Media</a></li>
+						<li><a href="/<?php echo $siteID;?>/members">Manage Members</a></li>
+						
+						
+					</ul>
+				</div>
+			</div>
+	</div>
+	<div class="col-lg-12">&nbsp;</div>
+	<div class="col-lg-12">
+		<nav class="bg-heading navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#search-collapse" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h4>
+						&nbsp;
+						<span class="badge"><?php echo $membcount;?></span>
+						<strong>Media for <?php echo $shortname;?></strong>
+					</h4>
+				</div>
+				<div class="navbar-collapse collapse" id="search-collapse" aria-expanded="false" style="height: 1px;">	 
+				</div>
+			</div>
+		</nav>
+		<div class="form-group">
+			<div class="table-responsive">
+				<table id="images" class="table table-hover">
+					<?php echo htmlspecialchars_decode($data); ?>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<?php 
+	if ($this->render(Base::instance()->get('modal-addimage')))
+	{
+		echo $this->render(Base::instance()->get('modal-addimage'));
+	}
+	else
+	{
+		echo Base::instance()->get('modal-addimage');
+	};
+	
+	if ($this->render(Base::instance()->get('modal-addvideo')))
+	{
+		echo $this->render(Base::instance()->get('modal-addvideo'));
+	}
+	else
+	{
+		echo Base::instance()->get('modal-addvideo');
+	};
+	
+	//if ($this->render(Base::instance()->get('modal-edit')))
+	//{
+		//echo $this->render(Base::instance()->get('modal-edit'));
+	//}
+	//else
+	//{
+		//echo Base::instance()->get('modal-edit');
+	//};
+	
+	
+	?>
+
+<script type="text/javascript"><?php echo htmlspecialchars_decode($js); ?></script>
+<script type="text/javascript"><?php echo htmlspecialchars_decode($addVideoPopUp); ?></script>
+<script type="text/javascript"><?php echo htmlspecialchars_decode($setupEditableTextboxes); ?></script>
