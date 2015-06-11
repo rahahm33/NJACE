@@ -1,0 +1,484 @@
+#div_click:hover #im_click{
+    width:102px;
+	height:110px;
+}
+
+#div_click:hover{
+	background:#F9F9F9;
+}
+
+#preloader
+{
+    position:fixed;
+    padding:0;
+    margin:0;
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,1);
+	z-index:9999;
+	text-align:center;
+}
+
+#announcements tr.node:hover,
+#viewtickettracking  tr.node:hover,
+#viewticket tr.node:hover{
+	opacity:0.7;
+}
+
+#announcements tr.node > td:hover,
+#viewticket tr.node > td:hover,
+#viewtickettracking tr.node > td:hover{
+	cursor:pointer;
+}
+
+#announcements tr.node > td,
+#viewticket tr.node > td,
+#viewtickettracking tr.node > td{
+	color:#FFF;
+}
+#viewticket tr.node > td.icon,
+#viewtickettracking tr.node > td.icon{
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:10px;
+}
+
+/* Ticket Status */
+.Resolved{
+	text-decoration:line-through;
+	opacity:.5;
+}
+
+#viewtickettracking > tr{
+	text-decoration: initial;
+}
+
+/* Ticket Priorities */
+#viewticket tr.low,
+#viewtickettracking tr.low{
+	background-color:#2ECC71;
+}
+#viewticket tr.medium,
+#viewtickettracking tr.medium{
+	background-color:#F1C40F;
+}
+#viewticket tr.high,
+#viewtickettracking tr.high{
+	background-color:#E67E22;
+}
+#viewticket tr.immediate,
+#viewtickettracking tr.immediate{
+	background-color:#C0392B;
+}
+
+.low.btn{
+	background-color:rgb(83, 241, 150);
+	color:black;
+	opacity:0.4;
+}
+
+.low.btn.active, .low.btn:active,.low.btn:hover{
+	background-color:#2ECC71;
+	color:white;
+	opacity:1;
+}
+
+.low.btn.active, .low.btn:active
+{
+	font-weight:bold;
+}
+
+.medium.btn{
+	background-color:rgb(240, 235, 54);
+	color:black;
+	opacity:0.4;
+}
+
+.medium.btn.active, .medium.btn:active,.medium.btn:hover{
+	background-color:#F1C40F;
+	color:white;
+	opacity:1;
+}
+
+.medium.btn.active, .medium.btn:active
+{
+	font-weight:bold;
+}
+
+.high.btn{
+	background-color:rgb(255, 195, 103);
+	color:black;
+	opacity:0.4;
+}
+
+.high.btn.active, .high.btn:active,.high.btn:hover{
+	background-color:#E67E22;
+	color:white;
+	opacity:1;
+}
+
+.high.btn.active, .high.btn:active
+{
+	font-weight:bold;
+}
+
+.immediate.btn{
+	background-color:rgb(249, 114, 100);
+	color:black;
+	opacity:0.4;
+}
+
+.immediate.btn.active, .immediate.btn:active,.immediate.btn:hover{
+	background-color:#C0392B;
+	color:white;
+	opacity:1;
+}
+
+.immediate.btn.active, .immediate.btn:active
+{
+	font-weight:bold;
+}
+
+
+
+/*MyBB*/
+main.MyBBForum.container 
+{
+	background:none;
+	line-height:1.8;
+	font-size:13px;
+}
+
+main.MyBBForum.container .author_avatar,main.MyBBForum.container .author_information img{
+	display:none;visibility:hidden;
+}
+
+main.MyBBForum.container fieldset,main.MyBBForum.container select,main.MyBBForum.container input,main.MyBBForum.container textarea {
+	width:auto;
+	height:auto;
+	
+}
+
+main.MyBBForum.container strong a{
+font-weight:100;
+
+}
+
+main.MyBBForum.container fieldset {
+border:0;
+}
+.php_warning {
+	display:none;
+	visibility:hidden;
+}
+
+
+
+.enabled-row {
+color:#FFF;background-color: #4d90fe
+}
+.disabled-row {
+color:#FFF;background-color: #D54937
+}
+
+.enabled-row:hover,.enabled-row:hover>td {
+background-color: #4d90fe;
+} 
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+  
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.form-body
+{
+padding:20px;
+border-radius:5px;
+border:1px solid #e3e3e3
+}
+nav .navbar-brand img
+{
+	width:40px;
+	display:inline-block;
+	margin-right:10px;
+}
+nav .navbar-brand
+{
+	height:auto;
+}
+
+.navbar-default .navbar-nav>li>a,.navbar-default .navbar-nav>.active>a
+{
+	color:#D6DFE5;
+	background:inherit;
+}
+
+.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>li>a:hover
+{
+	color:#FFF;
+	background:inherit;
+}
+
+.navbar-default .navbar-nav>li
+{
+	font-size:16px;
+}
+
+.navbar-default .navbar-nav>.active>a
+{
+	color:#FFF;
+	border-bottom:2px solid #308CCF
+}
+
+
+
+.navbar-default .navbar-nav>.active>a:active,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:visited,
+.navbar-default .navbar-nav>.open>a:active,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:visited,
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover
+{
+	background:inherit;
+	color:#FFF;
+}
+
+.navbar-nav>li>.dropdown-menu
+{
+	border-radius:4px;
+}
+
+.navbar.logged-in
+{	
+	color:#FFF;
+	background:#4D90FE
+}
+
+.navbar
+{
+	color:#FFF;
+	background:#AB4D4D
+}
+
+.dropdown .caret
+{
+	margin:0;
+	padding:0;
+}
+
+.m-btn
+{
+	white-space:normal;
+}
+
+nav .navbar-brand span
+{
+	color:#FFF;
+	font-size:26px;
+}
+
+#announcements
+{
+	border-top:1px solid rgba(0, 0, 0, 0.1);
+	background:#fff url("http://njace-cc.montclair.edu/img/noise.png");
+}
+
+footer #links
+{
+	border-top:1px solid rgba(0, 0, 0, 0.1);
+	background:#F1F1F1
+}
+
+footer #links ul li,footer #links ul
+{
+	list-style:none;
+	text-indent:none;
+	margin:0;
+	padding:0;
+	padding-bottom:5px;
+}
+
+
+footer #links h3
+{
+	text-transform:uppercase;
+	color:#308CCF;
+}
+
+footer #copyright
+{
+	color:#ddd;
+	background:#AB4D4D
+}
+
+#infoLinks .lead
+{
+	font-size:16px;
+}
+.navbar-default .navbar-toggle
+{
+	border:0; 
+}
+.navbar-default .navbar-toggle .icon-bar
+{
+	background:#FFF;
+}
+
+.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:active,.navbar-default .navbar-toggle:focus
+{
+	background:#FFF;
+}
+
+.navbar-default .navbar-toggle:hover  .icon-bar, .navbar-default .navbar-toggle:active .icon-bar, .navbar-default .navbar-toggle:focus  .icon-bar
+{
+	background:#4D90FE
+}
+
+@media (max-width: 767px)
+{
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover
+	{
+		color:#FFF;
+	}
+}
+main h3
+{
+	margin:0;
+	padding:0;
+	margin-bottom:10px;
+	line-height:40px;
+}
+
+
+
+
+#announcements .owl-item
+{
+	padding:20px;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.owl-nav .prev {
+  left: 0px;
+  background: url(../img/controls.png) no-repeat 0 -32px;
+}
+.owl-nav .prev:hover,
+.owl-nav .prev:focus {
+  background-position: 0 0;
+}
+.owl-nav .next {
+  right: 0px;
+  background: url(../img/controls.png) no-repeat -43px -32px;
+}
+.owl-nav .next:hover,
+.owl-nav .next:focus {
+  background-position: -43px 0;
+}
+.owl-nav .prev,.owl-nav .next {
+  position: absolute;
+  top: 50%;
+  margin-top: -32px;
+  outline: 0;
+  width: 34px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.announ-block.row
+{
+	margin:0;
+	background:#FFF;
+	border:1px solid #e0e0e0;
+	padding:15px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.announ-block .date
+{
+	margin:0;
+	padding:0;
+
+	margin:auto;
+}
+
+.announ-block .date .month,.announ-block .date .day
+{
+	margin:0;
+	padding:0;
+	margin:auto;
+	text-align:center;
+}
+
+
+.announ-block .date .month
+{
+	font-size: 18px;
+	line-height: 22px;
+	background-color: #ab4d4d;
+	color: #fff;
+	border: 1px solid #ab4d4d;
+	border-radius: 5px 5px 0px 0px; 
+	-moz-border-radius: 5px 5px 0px 0px; 
+	-webkit-border-radius: 5px 5px 0px 0px; 
+	width:100%;
+}
+.announ-block .date .day
+{
+	text-align: center;
+	font-size: 30px;
+	line-height: 34px;
+	background-color: #fff;
+	border-radius: 0px 0px 5px 5px; 
+		-moz-border-radius: 0px 0px 5px 5px; 
+		-webkit-border-radius: 0px 0px 5px 5px; 
+	color:#999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+ }
+ 
+ .announ-block .type
+ {
+	color:#999;
+	text-align:right;
+ }
+ .image-block img
+ {
+	width:100%;
+ }
+ .carousel-caption
+ {
+	position:absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 15px 15px 25px 15px;
+	background: rgba(0, 0, 0, 0.75);
+	text-align:left;
+}
+.small-p-middle
+{
+	color: #999999;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bg-heading
+{
+	background-color:#e9e9e9;
+	padding:2px;
+}

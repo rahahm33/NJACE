@@ -1,0 +1,87 @@
+<!-- Modal -->
+<form method="post" action="/announcements" id="addForm" class="form-horizontal" enctype="multipart/form-data">
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+  <div class="modal-lg modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="addModalLabel">Add Announcement</h4>
+      </div>
+      <div class="modal-body"> 
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Announcement Title</label>
+				</div>
+				<div class="col-lg-9">				
+					<input type="text" class="form-control" name="announcementtitle" autocomplete="off" placeholder="Announcement Title" required="required">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Homepage Title</label>
+				</div>
+				<div class="col-lg-9">
+					<input type="text" class="form-control" name="homepagetitle" autocomplete="off" placeholder="Name displayed on the home page" required="required">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Category</label>
+				</div>
+				<div class="col-lg-9">
+					<select class="form-control" name="announType">
+						<?php echo htmlspecialchars_decode($types);?>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Post Date</label>
+				</div>
+				<div class="col-lg-9">
+					<input type="text" class="form-control sdate" name="sdate" autocomplete="off" value="<?php echo date('m/d/Y', time());?>" required="required">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Expiration Date</label>
+				</div>
+				<div class="col-lg-9">
+					<input type="text" class="form-control edate" name="edate" autocomplete="off" value="<?php echo date('m/d/Y', time()+7*24*60*60);?>" required="required">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Upload a PDF File</label>
+				</div>
+				<div class="col-lg-9">
+					<input class="form-control" type="file" name="file" id="file">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Upload a Image File</label>
+				</div>
+				<div class="col-lg-9">
+					<input class="form-control" type="file" name="image" id="image">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="col-lg-3">
+					<label class="form-label">Description</label>
+				</div>
+				<div class="col-lg-9">
+					<textarea class="form-control textarea" name="siteLeft" placeholder="Enter a description about your announcement" rows="10"></textarea>
+				</div>
+			</div>
+			<input type="hidden" name="id" id="id">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" value="1" id="submitbutton" type="submit" name="add" form="addForm">Post Announcement</button>
+		<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

@@ -1,0 +1,134 @@
+/*.sort{
+   width: 382px;
+   height: 26px;
+   overflow: hidden;
+	background: white url('http://njace-cc.montclair.edu/files/resources/43791_arrow.png') 95% 50% no-repeat;
+	
+	
+}
+.sort select{
+   background: transparent;
+   width: 202px;
+   height: 26px;
+	cursor: pointer;
+	text-decoration: none;		
+		color:#7c7875;
+		padding-top:4px;
+	margin-left:3px;
+
+}
+
+.date{
+   width: 52px;
+   height: 26px;
+   overflow: hidden;
+	background: white url('http://njace-cc.montclair.edu/files/resources/43791_arrow.png') 87% 50% no-repeat;
+	
+	
+}
+.date select{
+   background: transparent;
+   width: 72px;
+   height: 26px;
+	cursor: pointer;
+	text-decoration: none;		
+		color:#7c7875;
+		padding-top:4px;
+	margin-left:3px;
+
+}*/
+
+a.multiSelect {
+	background: white url('http://njace-cc.montclair.edu/files/resources/43791_arrow.png') 95% 50% no-repeat;
+	border: solid 1px #cacaca;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+			
+	color:#7c7875;
+	border-radius:4px;
+		
+}
+
+a.multiSelect:link, a.multiSelect:visited, a.multiSelect:hover, a.multiSelect:active {
+	color:#7c7875;
+	text-decoration: none;
+}
+
+a.multiSelect span
+{
+	/*overflow: hidden;*/
+	display: -moz-inline-stack;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+a.multiSelect.hover {
+	background: white url('http://njace-cc.montclair.edu/files/resources/43791_arrow.png') 95% 50% no-repeat;
+}
+
+a.multiSelect.active, 
+a.multiSelect.focus {
+	/*border: inset 0px #000;*/
+}
+
+a.multiSelect.active {
+	background: white url('http://njace-cc.montclair.edu/files/resources/43791_arrow.png') 95% 50% no-repeat;
+}
+
+.multiSelectOptions {
+	overflow-y: auto;
+	overflow-x: hidden;
+	border: solid 1px #cacaca;
+	background: #FFF;
+	/*width:auto;*/
+	
+}
+
+.multiSelectOptions LABEL {
+	padding: 0px 2px;
+	display: block;
+	white-space: nowrap;
+}
+
+.multiSelectOptions LABEL.optGroup
+{
+	font-weight: bold;
+}
+
+.multiSelectOptions .optGroupContainer LABEL
+{
+	padding-left: 10px;
+}
+
+.multiSelectOptions.optGroupHasCheckboxes .optGroupContainer LABEL
+{
+	padding-left: 18px;
+}
+
+.multiSelectOptions input{
+	vertical-align: middle;
+	
+}
+
+.multiSelectOptions label input {
+	margin-right:5px;
+	position:relative;
+	top:-3px;
+}
+
+.multiSelectOptions LABEL.checked {
+	background-color: #dce5f8;
+}
+
+.multiSelectOptions LABEL.selectAll {
+	border-bottom: dotted 1px #CCC;
+}
+
+.multiSelectOptions LABEL.hover {
+	background-color: #3399ff;
+	color: white;
+}

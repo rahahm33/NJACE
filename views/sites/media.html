@@ -1,0 +1,87 @@
+<div class="form-body">
+	<form action="" method="POST" >
+		<div class="col-lg-6">
+			<!-- For images -->
+
+			<h3 class="text-center"><b>Add Images</b></h3>
+			<hr/>
+			<div class="row text-center">To avoid stretching, image size must be at least</div>
+			<div class="row text-center"><b>700 x 400</b></div>
+			
+			<div id="div_click" class="form-group">
+				<div class="controls" align="center">
+					<div id="uploader">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-lg-6">
+			<!-- For videos -->
+			<h3 class="text-center"><b>Add Videos</b></h3>
+			<hr/>
+			<div class="row text-center">For good quality, video should be at least</div>
+			<div class="row text-center"><b>480 pixels</b></div>
+
+			<div class="form-group">
+				<div class="controls" align="center">
+					<div class="text-center"><img width="100px" height="150px"src="<?php echo Bridge::defaults('url')?>assets/img/media/uploadVideos.jpg"/></div>	
+					<input style="width:70%"type="text" name="url" class="form-control" placeholder="Youtube Link">
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="row" align="center">
+			<div class="col-lg-12">
+				<div class="form-group">
+					<button class="btn btn-primary btn-lg" id="triggerUpload" name="submit" disabled="disabled">Start Upload</button>
+					<button class="btn btn-primary btn-lg" id="triggerUpload" name="submit2">test</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">&nbsp;
+	</div>
+</div>
+
+<div class="form-body">
+	<div class="row">
+		<div class="col-lg-12">
+			<form method="POST" action="/">
+				<div class="form-group">
+					<div class="table-responsive"><!-- responsive table with scroll bar -->
+						<table class="table">
+							<?php
+								echo htmlspecialchars_decode($records);
+							?>
+						</table>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">&nbsp;
+	</div>
+</div>
+
+	<!-- <div class="row">
+		the uploaded items here are missing php part
+		
+		<div class="hidden" id="groupid"><?php //echo $_GET['id'] ?></div>
+		<div style="float:left;clear:both;width:100%;text-align:center;">
+			<input name="test" value="test" type="hidden" /><input align="middle" type="submit" id="btnContinue" name="update" class="m-btn green span3" form="form2" value="Update Images">
+		</div>
+	</div> -->
+	
+
+<?php echo htmlspecialchars_decode($mediaClick);?>
+<?php echo htmlspecialchars_decode($startUpload);?>
+<?php echo htmlspecialchars_decode($upload);?>

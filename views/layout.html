@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title><?php echo $page_name;?> | <?php echo $title;?></title>
+		<?php echo $this->render(Base::instance()->get('headinclude')); ?>
+	</head>
+
+	<body>
+		<div id="preloader"><div style="text-align:center;position:absolute;top: 50%;
+    margin-top: -90px;left:50%;"></div></div>
+		<header>
+			<?php 
+			if ($this->render(Base::instance()->get('header')))
+			{
+				echo $this->render(Base::instance()->get('header'));
+			}
+			else
+			{
+				echo Base::instance()->get('header');
+			};
+			?>
+		</header>
+		
+		<?php if (!(stripos($route[0],'map'))) { ?>
+		<main class="container">
+		<?php } else { ?>
+		<main class="container-fluid">
+		<?php } ?>
+			<?php 
+			if ($this->render(Base::instance()->get('main')))
+			{
+				echo $this->render(Base::instance()->get('main'));
+			}
+			else
+			{
+				echo Base::instance()->get('main');
+			};
+			?>
+		</main>
+		
+		
+		<footer class="container-fluid">	
+			<?php 
+			if ($this->render(Base::instance()->get('footer')))
+			{
+				echo $this->render(Base::instance()->get('footer'));
+			}
+			else
+			{
+				echo Base::instance()->get('footer');
+			};
+			?>
+		</footer>
+		
+		
+	</body>	
+</html>

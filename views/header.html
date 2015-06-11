@@ -1,0 +1,79 @@
+<nav class="navbar navbar-default navbar-static-top">
+			  <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+					<a class="navbar-brand" href="/">
+						<img src="http://njace-cc.montclair.edu/img/njace-cc-msu-white.png" alt="" />
+						<span class="hidden-xs hidden-sm"><?php echo $title;?></span>
+						<span class="hidden-md hidden-lg"><?php echo $short_title;?></span>
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+				<?php
+					/* Menu IDs
+						0 - Home
+						1 - Resources
+						2 - Research Sites
+						3 - How can I help
+						4 - Login/User 
+					*/
+					
+				$menu = array(
+					"home" => '0',
+					"announcements" => '1',
+					"event" => '1',
+					"news" => '1',
+					"resources" => '1',
+					"login" => '4',
+					"ticket" => '4'				
+				);
+				
+				foreach ($menu as $uri=>$id)
+				{					
+					if (stripos($route[0],$uri))
+					{						
+						$active[$id] = 'active';
+					}
+				}
+				
+				?>
+				
+				  <ul class="nav navbar-nav navbar-right">
+					<li class="<?php echo $active[0];?>"><a href="/">Home</a></li>
+					<li class="<?php echo $active[1];?> dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Resources <span class="caret"></span></a>
+					  <ul class="dropdown-menu" role="menu">
+						<?php echo htmlspecialchars_decode($resourcesmenu);?>   
+					  </ul>
+					</li>
+					
+					<li class="<?php echo $active[2];?> dropdown dropdown-accordion">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Research Sites <span class="caret"></span></a>
+					  <ul id="accordion1" class="dropdown-menu" role="menu">
+						<?php echo htmlspecialchars_decode($sitesmenu);?>   
+					  </ul>
+					</li>
+					
+					<li class="<?php echo $active[3];?>"><a href="/how-can-i-help">How can I help?</a></li>
+					<?php if ($member) { ?>
+						<li class="<?php echo $active[4];?> dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $mybb['username'];?><span class="caret"></span></a>
+						  <ul class="dropdown-menu" role="menu">
+							<?php echo htmlspecialchars_decode($usermenu);?>   
+						  </ul>
+						</li>
+					<? } else {	?>
+						<li class="<?php echo $active[4];?>"><a href="/login">Login</a></li>
+					<? } ?>
+				  </ul>
+				</div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
