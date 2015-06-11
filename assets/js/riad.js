@@ -916,7 +916,7 @@ function setupEditableTextboxes(){
         title: 'Edit Title'
     });
     $('.description').editable({
-        type: 'textarea',
+        type: 'text',
 
         title: 'Edit Description'
     });
