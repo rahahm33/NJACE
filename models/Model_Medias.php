@@ -51,21 +51,20 @@ class Model_Medias extends Model
 				<iframe class="img-thumbnail embed-responsive-item" src="'. $row['src'].'"></iframe>
 				</div></td>';
 			}
-                        $title ='No Title';
-                        $desc='No Description';
-                        if(!empty($row['title'])){
+
+                       // if(!empty($row['title'])){
                            $title = $row['title'];
-                        }
-                        else{
+                        //}
+                        //else{
                            
-                        }
-                        if(!empty($row['description'])){
+                        //}
+                        //if(!empty($row['description'])){
                             $desc = $row['description'];
-                        }
+                        //}
                         
-			$output .='<td title="Edit image" data-placement="top" data-toggle="tooltip">
-                                    <a class="title" href="javascript:void()"><strong class="title">'.$title.'</strong></a>
-                                    <a class="description" href="javascript:void()"><p>'.$desc.'</p></a>
+			$output .='<td>
+                                    <a class="title" style="font-weight:bold" href="javascript:void()">'.$title.'</a><br />
+                                    <a class="description" href="javascript:void()">'.$desc.'</a>
 				</td>';
                         $output.= '<td><a class="crop btn btn-warning" href="/crop/'.$row['id'].'">Crop / Resize</a></td></tr>';
                         

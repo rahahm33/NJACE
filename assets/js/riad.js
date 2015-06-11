@@ -912,13 +912,21 @@ function setupEditableTextboxes(){
     
     $('.title').editable({
         type: 'text',
-
+        placeholder: 'No Title',
         title: 'Edit Title'
     });
     $('.description').editable({
-        type: 'text',
-
+        type: 'textarea',
+        rows: '3',
+        inputclass: 'editDesctextarea',
+        placeholder: 'No Description',
         title: 'Edit Description'
     });
+    $('tr').each(function(i)
+    {
+        $(this).find('.editable-empty').eq(0).text('No Title');
+        $(this).find('.editable-empty').eq(1).text('No Description');
+    });
+    
 }
 

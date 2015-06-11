@@ -1,3 +1,21 @@
+/*div.editable-input
+{
+    width:80%;
+}
+
+div.control-group.form-group
+{
+    display:block;
+}*/
+.editableform textarea.editDesctextarea.form-control
+{
+    width:500px;
+}
+
+span.editable-container.editable-inline
+{
+    display:block;
+}
 #images tr td:nth-child(3):hover
 {
 	cursor:pointer;
